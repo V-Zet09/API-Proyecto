@@ -1,8 +1,18 @@
 <?php
 
+use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\PeriodController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\UserController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Session;
+use PharIo\Manifest\Email;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +40,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('registrations', RegistrationController::class);
-
 
 
 require __DIR__.'/auth.php';
