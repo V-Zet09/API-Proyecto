@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(["prefix"=> "v1", 'namespace' => 'App\Http\Controllers'], function () {
-    Route::apiResource("registrations",RegistrationController::class);
-
+// Agrupación de rutas para la API versión 1
+Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers'], function () {
+    // Rutas para el recurso "registrations" utilizando RegistrationController
+    Route::apiResource('registrations', RegistrationController::class);
 });

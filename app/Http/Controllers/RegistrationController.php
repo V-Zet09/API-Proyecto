@@ -15,49 +15,66 @@ class RegistrationController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @param Request $request
+     * @return RegistrationCollection
      */
-        public function index(Request $request)
+    public function index(Request $request)
     {
-        $filter =new RegistrationFilters();
+        // Filtros de búsqueda
+        $filter = new RegistrationFilters();
         $queryItems = $filter->transform($request);
 
-        $registration=Registration::where($queryItems);
-        return new RegistrationCollection($registration->paginate()->appends($request->query()));
+        // Recuperar registros filtrados
+        $registros = Registration::where($queryItems);
+        $registros = $registros->paginate()->appends($request->query());
+
+        // Retornar colección de registros paginados
+        return new RegistrationCollection($registros);
     }
 
     public function create()
     {
-        //
+        // Mostrar formulario de creación
+        // ...
     }
 
     public function store(StoreRegistrationRequest $request)
     {
-        return new RegistrationResource(Registration::create($request->all()));
+        // Validar y almacenar nuevo registro
+        $registro = Registration::create($request->all());
+
+        // Retornar recurso del registro creado
+        return new RegistrationResource($registro);
     }
 
-    public function show(Registration $registration)
+    public function show(Registration $registro)
     {
-       //
-        return new RegistrationResource($registration);
+        // Mostrar registro específico
+        // ...
+
+        // Retornar recurso del registro
+        return new RegistrationResource($registro);
     }
 
-
-    public function edit(Registration $registration)
+    public function edit(Registration $registro)
     {
-      //
+        // Mostrar formulario de edición
+        // ...
     }
 
-    public function update(UpdateRegistrationRequest $request, Registration $registration)
+    public function update(UpdateRegistrationRequest $request, Registration $registro)
     {
-        //
-        $registration->update($request->all());
+        // Validar y actualizar registro
+        $registro->update($request->all());
+        // ...
     }
 
-    public function destroy(Registration $registration)
+    public function destroy(Registration $registro)
     {
-        $registration->delete();
+        // Eliminar registro
+        $registro->delete();
 
+        // Retornar mensaje de éxito
         return response()->json(['message' => 'Registro eliminado exitosamente']);
     }
-
 }
