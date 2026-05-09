@@ -1,99 +1,136 @@
-API de Gestión – Laravel
-📌 Descripción
+# 🚀 Registration API Project
 
-API REST desarrollada con Laravel (PHP) para la gestión de información mediante endpoints seguros y estructurados.
-El proyecto implementa autenticación, roles de usuario, validación de datos y operaciones CRUD, siguiendo buenas prácticas de desarrollo backend.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 
-Este proyecto fue desarrollado como parte de mi formación profesional, con enfoque en backend, bases de datos y seguridad básica.
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
-🚀 Tecnologías utilizadas
+![API](https://img.shields.io/badge/REST_API-02569B?style=for-the-badge)
 
-PHP 8.x
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-Laravel
+---
 
-MySQL / PostgreSQL
+# 👨‍💻 About the Project
 
-Eloquent ORM
+This project consists of a REST API connected to a database, focusing on the `registration` table.
 
-APIs REST
+A CRUD system was first developed to manage records efficiently, and later integrated into an API tested with Postman.
 
-Git / GitHub
+The API supports the main HTTP methods:
 
-Linux (entorno de desarrollo)
+- GET
+- POST
+- PUT
+- PATCH
+- DELETE
 
-⚙️ Funcionalidades principales
+---
 
-Autenticación de usuarios
+# 🛠️ Technologies Used
 
-Gestión de roles y permisos
+- Java
+- REST API
+- MySQL
+- Postman
+- JSON
+- SQL
 
-CRUD de recursos mediante endpoints REST
+---
 
-Validación de datos en peticiones
+# ⚙️ Features
 
-Manejo de respuestas HTTP (status codes)
+✅ Create new records  
+✅ Retrieve registration data  
+✅ Update existing records  
+✅ Modify specific fields using PATCH  
+✅ Delete records from the database  
 
-Organización del proyecto bajo arquitectura MVC
+---
 
-Migraciones y seeders para base de datos
+# 📂 API Endpoints
 
-🔐 Seguridad
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/registration` | Get all records |
+| GET | `/registration/{id}` | Get record by ID |
+| POST | `/registration` | Create new record |
+| PUT | `/registration/{id}` | Update complete record |
+| PATCH | `/registration/{id}` | Update partial data |
+| DELETE | `/registration/{id}` | Delete record |
 
-Validación de entradas para prevenir datos inconsistentes
+---
 
-Uso de middleware para control de acceso
+# 📸 Project Screenshots
 
-Separación de lógica de negocio y controladores
+## 📌 Postman Testing
 
-Buenas prácticas básicas de seguridad en APIs
+![Postman](img/postman-api.png)
 
-📂 Estructura del proyecto
+---
 
-app/Http/Controllers – Controladores de la API
+## 💻 Source Code
 
-app/Models – Modelos Eloquent
+![Code](img/api-code.png)
 
-routes/api.php – Definición de rutas API
+---
 
-database/migrations – Estructura de base de datos
+## 🗄️ Database Structure
 
-🛠️ Instalación y configuración
-git clone https://github.com/V-Zet09/API-Proyecto.git
-cd API-Proyecto
-composer install
-cp .env.example .env
-php artisan key:generate
+![Database](img/database.png)
 
+---
 
-Configura la base de datos en el archivo .env y ejecuta:
+# ▶️ How to Run
 
-php artisan migrate
-php artisan serve
+## Clone repository
 
-🧪 Pruebas
+```bash
+git clone https://github.com/your-user/your-repository.git
+```
 
-El proyecto incluye pruebas básicas y validación de endpoints mediante herramientas como Postman o similares.
+## Open project
 
-📈 Aprendizajes clave
+Import the project into your IDE.
 
-Desarrollo de APIs REST con Laravel
+## Configure database
 
-Diseño de bases de datos relacionales
+Update database credentials in your configuration file.
 
-Manejo de autenticación y roles
+## Run the application
 
-Optimización de consultas SQL
+Start the server and test endpoints using Postman.
 
-Control de versiones con Git/GitHub
+---
 
-👨‍💻 Autor
+# 🎯 Project Goal
 
-Maico Zaet Pérez Valencia
-Desarrollador Backend Jr
-GitHub: https://github.com/V-Zet09
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The main purpose of this project is to strengthen backend development skills by implementing CRUD operations and REST API communication with databases.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 📈 Learning Outcomes
+
+- REST API development
+- HTTP methods handling
+- Database integration
+- CRUD operations
+- API testing with Postman
+- Backend logic
+
+---
+
+# 👨‍💻 Author
+
+## Maico Perez
+
+Computer Engineering Graduate | Backend & Web Development Enthusiast
+
+### 🔗 GitHub
+
+- https://github.com/V-Zet09
+
+---
+
+# ⭐ Project Status
+
+🚧 Project under continuous improvement.
